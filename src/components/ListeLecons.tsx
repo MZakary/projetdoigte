@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import '../SCSS/_listeLecon.scss';
 
 function ListeLecons(){
     useEffect(() => {

@@ -1,7 +1,7 @@
 
 
 import { useState, useEffect } from "react";
-import { playSound } from "@/utils/generalUtils";
+import { playSound } from "../utils/generalUtils";
 
 interface TyperProps {
     levels: string[]; // Define levels as an array of strings
@@ -86,7 +86,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
 
         
             let key = event.key;
-            playSound('src/sounds/TypeSound.wav');
+            playSound('public/sounds/TypeSound.wav');
         
             if (event.code === 'Semicolon') {
                 key = ';';

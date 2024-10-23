@@ -1,10 +1,5 @@
 @import '_variables.scss';
-@import '_index.scss';
-@import '_typer.scss';
-@import '_mainPage.scss';
-@import '_about.scss';
-@import '_listeLecon.scss';
-@import '_newMainPage.scss';
+
 
 
 
@@ -87,6 +82,7 @@
 
 
   body {
+    //display: block;
     background-color: $primary-white;
     color: #000000;
   }

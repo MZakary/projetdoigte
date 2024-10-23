@@ -1,10 +1,17 @@
 import { RouterProvider, createBrowserRouter, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import NewMainPage from './components/NewMainPage';
-import './SCSS/_style.scss';
 import NewTyper from './components/NewTyper';
 import About from './components/About';
 import ListeLecons from './components/ListeLecons';
+import './SCSS/_style.scss';
+import './SCSS/_variables.scss';
+import './SCSS/_index.scss';
+import './SCSS/_typer.scss';
+import './SCSS/_mainPage.scss';
+import './SCSS/_about.scss';
+
+import './SCSS/_newMainPage.scss';
 
 const Levels: string[][] = [
   // ['a'],
