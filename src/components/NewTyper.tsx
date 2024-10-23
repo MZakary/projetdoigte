@@ -86,7 +86,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
 
         
             let key = event.key;
-            playSound('sounds/TypeSound.wav');
+            playSound('/projetdoighte/sounds/TypeSound.wav');
         
             if (event.code === 'Semicolon') {
                 key = ';';
@@ -107,7 +107,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
                     if (speechSynthesis.speaking) {
                         speechSynthesis.cancel();  // Only stop if currently speaking
                     }
-                    playSound('src/sounds/ErrorSound.wav');  // Optional: play error sound
+                    playSound('/projetdoighte/sounds/ErrorSound.wav');  // Optional: play error sound
                     speakLetter('Erreur! Réessayez à partir de la denière lettre inséré!');
                 }
             }
@@ -119,7 +119,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
                     if (speechSynthesis.speaking) {
                         speechSynthesis.cancel();  // Only stop if currently speaking
                     }
-                    playSound('src/sounds/GoodSound.wav');
+                    playSound('/projetdoighte/sounds/GoodSound.wav');
                     speakLetter('Bravo!');      
                     
                     // Check if it's a word and update levelAttempts correctly
@@ -230,7 +230,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
     // Toggle between male and female voice
     const toggleVoice = () => {
         setIsMaleVoice(prev => !prev);
-        playSound('src/sounds/ChangementDeVoix.wav');
+        playSound('/projetdoighte/sounds/ChangementDeVoix.wav');
 
     };
 
