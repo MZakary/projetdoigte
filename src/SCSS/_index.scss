@@ -22,7 +22,7 @@ header{
             width: 62.5px;
             height: 62.5px;
             & span{
-                font-size: 50px;
+                font-size: 62.5px;
                 margin: auto;
             }
         }
@@ -57,14 +57,9 @@ header{
             border-radius: 5px;
         }
 
-        .Lecon{
-            background-color: cyan;
-        }
-        .APropos{
-            background-color: red;
-        }
-        .AideUtil{
-            background-color: yellow;
+        .Lecon, .APropos, .AideUtil{
+            background-color: $primary-white;
+            
         }
     }
 
