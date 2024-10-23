@@ -27,9 +27,8 @@ const Levels: string[][] = [
 ];
 
 function App() {
-
   return (
-    <> 
+    <>
       <RouterProvider 
         router={createBrowserRouter([
           {
@@ -47,15 +46,14 @@ function App() {
               {path: 'lecon7', element: <NewTyper levels={Levels[6]} lessonName={'La Lettre l'} />},
               {path: 'lecon8', element: <NewTyper levels={Levels[7]} lessonName={'Le point virgule'} />},
               {path: 'lecon9', element: <NewTyper levels={Levels[8]} lessonName={'Le point virgule (suite)'} />},
-              
               {path: 'a-propos', element: <About/>},
               {path: '*', element: <Navigate to="/" replace /> },
             ],
           },
-        ])}
+        ], { basename: '/projetdoighte' })}
       />
     </>
-  )
+  );
 }
 
 export default App;
