@@ -86,7 +86,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
 
         
             let key = event.key;
-            playSound('public/sounds/TypeSound.wav');
+            playSound('sounds/TypeSound.wav');
         
             if (event.code === 'Semicolon') {
                 key = ';';
