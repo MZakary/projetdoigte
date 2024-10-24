@@ -50,7 +50,7 @@ function App() {
               {path: '*', element: <Navigate to="/" replace /> },
             ],
           },
-        ], { basename: '/projetdoighte' })}
+        ], { basename: '/projetdoigte' })}
       />
     </>
   );
