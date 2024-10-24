@@ -93,10 +93,14 @@ body.high-contrast {
             }
         }
         .ZoomText{
-        button{
-            background-color: black;
-            color: $primary-white;
+            button{
+                background-color: black;
+                color: $primary-white;
+            }
         }
+        .Lecon, .APropos, .AideUtil{
+            color: $primary-white;
+            background-color: black;
         }
     }
 

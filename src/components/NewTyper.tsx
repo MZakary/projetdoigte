@@ -59,7 +59,6 @@ function NewTyper({levels, lessonName} : TyperProps) {
         setCurrentLevel(0); //Start level one
         setCurrentString(levels[0]); //Start Letter 1
         speakLetter("Avant de commencer le niveau");
-        //console.log(levels[0]);
     }, []);
 
     // Handle keyboard input only when the text area is focused
@@ -79,14 +78,13 @@ function NewTyper({levels, lessonName} : TyperProps) {
                 const activeElement = document.activeElement as HTMLElement;
                 if (activeElement.tagName === 'TEXTAREA') {
                     activeElement.blur();  // Explicitly remove focus from the text area
-                    //console.log('Escape key pressed, blurring text area');
                 }
                 return;  // Prevent any further game logic from handling the escape key
             }
 
         
             let key = event.key;
-            playSound('/projetdoighte/sounds/TypeSound.wav');
+            playSound('/projetdoigte/sounds/TypeSound.wav');
         
             if (event.code === 'Semicolon') {
                 key = ';';
@@ -107,7 +105,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
                     if (speechSynthesis.speaking) {
                         speechSynthesis.cancel();  // Only stop if currently speaking
                     }
-                    playSound('/projetdoighte/sounds/ErrorSound.wav');  // Optional: play error sound
+                    playSound('/projetdoigte/sounds/ErrorSound.wav');  // Optional: play error sound
                     speakLetter('Erreur! Réessayez à partir de la denière lettre inséré!');
                 }
             }
@@ -119,7 +117,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
                     if (speechSynthesis.speaking) {
                         speechSynthesis.cancel();  // Only stop if currently speaking
                     }
-                    playSound('/projetdoighte/sounds/GoodSound.wav');
+                    playSound('/projetdoigte/sounds/GoodSound.wav');
                     speakLetter('Bravo!');      
                     
                     // Check if it's a word and update levelAttempts correctly
@@ -151,8 +149,6 @@ function NewTyper({levels, lessonName} : TyperProps) {
                                 setGameStarted(false);
                                 setIsTAFocused(false);
                                 speakLetter("Vous avez terminer la leçon! Voulez-vous télécharger vos résultats?");
-                                
-                                //Get time at the end and subtract beginning from end to see how long it took for the game too complete
 
                             }
                         } else {
@@ -201,11 +197,6 @@ function NewTyper({levels, lessonName} : TyperProps) {
         }
     };
 
-    // const generateRandomLetter = () => {
-    //     const letters = 'asdfjkl;'; // Adjust as necessary for French keyboard
-    //     return letters[Math.floor(Math.random() * letters.length)];
-    // };
-
     const speakLetter = (text: string) => {
 
         if(toggleSynth) return;
@@ -230,7 +221,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
     // Toggle between male and female voice
     const toggleVoice = () => {
         setIsMaleVoice(prev => !prev);
-        playSound('/projetdoighte/sounds/ChangementDeVoix.wav');
+        playSound('/projetdoigte/sounds/ChangementDeVoix.wav');
 
     };
 
@@ -325,7 +316,7 @@ function NewTyper({levels, lessonName} : TyperProps) {
                     </div>
                     
                     <p className="StartParagraph">Vous devez appuyer sur la touche espace après chaque caractère, mot ou expression demandé.</p>
-                    <p className="StartParagraph">Rappel!  Vous pouvez effectuer la commande clavier Ctrl+r afin de répéter l'information ou consulter les instructions directement à partir de la page d'activités.</p>
+                    <p className="StartParagraph">Rappel!  Vous pouvez effectuer la commande clavier <strong>Ctrl+r</strong> afin de répéter l'information ou consulter les instructions directement à partir de la page d'activités.</p>
                     <div className="Options">
                         <label htmlFor="toggleSynth">Désactiver la synthèse vocale ?</label>
                         <input 

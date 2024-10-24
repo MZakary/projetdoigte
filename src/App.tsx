@@ -8,9 +8,7 @@ import './SCSS/_style.scss';
 import './SCSS/_variables.scss';
 import './SCSS/_index.scss';
 import './SCSS/_typer.scss';
-import './SCSS/_mainPage.scss';
 import './SCSS/_about.scss';
-
 import './SCSS/_newMainPage.scss';
 
 const Levels: string[][] = [

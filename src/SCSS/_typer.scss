@@ -9,7 +9,7 @@ section.Typer{
     align-items: center;
 
     .TyperGame{
-        height: calc(100vh - 123px);
+        min-height: calc(100vh - 122px);
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -96,8 +96,20 @@ section.Typer{
             display: flex;
             gap: 40px;
 
+            
             .divMainsDroite{
                 text-align: right;
+            }
+
+            .divMainsDroite, .divMainsGauche{
+                ul{
+                    list-style: none;
+                    padding: 0;
+                }
+            }
+
+            .divMainsGauche{
+                text-align: left;
             }
         }
 

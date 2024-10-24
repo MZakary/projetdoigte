@@ -36,7 +36,7 @@ function NewMainPage(){
             <p>Une rétroaction sonore vous sera fourni afin de vous avisez de votre réussite et de vos erreurs.</p>
 
             <h2>Voir la liste des leçons</h2>
-            <Link to="/lecons">Liste des leçons</Link>
+            <Link to="/lecons" className="BoutonLecon">Liste des leçons</Link>
         </section>
     )
 }
